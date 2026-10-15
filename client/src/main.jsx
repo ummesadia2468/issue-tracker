@@ -1,0 +1,28 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import { AuthProvider } from './auth';
+import { ThemeProvider } from './theme';
+import { I18nProvider } from './i18n';
+import { ToastProvider } from './toast';
+import { registerServiceWorker } from './pwa';
+import './index.css';
+
+registerServiceWorker();
+
+createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <ThemeProvider>
+        <I18nProvider>
+          <ToastProvider>
+            <AuthProvider>
+              <App />
+            </AuthProvider>
+          </ToastProvider>
+        </I18nProvider>
+      </ThemeProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);

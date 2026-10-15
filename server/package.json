@@ -1,0 +1,34 @@
+{
+  "name": "issue-tracker-server",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "setup:google": "node scripts/setup-google.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^12.11.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^7.4.0",
+    "google-auth-library": "^9.14.1",
+    "helmet": "^7.1.0",
+    "issue-tracker": "file:..",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.15",
+    "pdfkit": "^0.15.0",
+    "web-push": "^3.6.7",
+    "zod": "^3.23.8"
+  }
+}
